@@ -4,6 +4,12 @@ h2
   color: #4287f5;
 }
 
+#main
+{
+  text-align: center;
+  color: red
+}
+
 #state-year-form
 {
     text-align: center;
@@ -11,7 +17,10 @@ h2
 
 .box
 {
- 
+text-align: center;
+padding: 2em;
+border: 0.2em solid #4287f5;
+color: red;
  
 }
 
@@ -20,7 +29,15 @@ h2
     text-align: center;
     color: #4287f5
 }
-/* text-align: center;
-padding: 1em;
-border: 0.5em solid black;
-color: red; */
+
+#state-select-form
+{
+   background-color: rgb(220, 59, 59);
+  color: white;
+}
+
+#usa-photo 
+{
+  text-align: center;
+  color:rgb(220, 59, 59)
+}

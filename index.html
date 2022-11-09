@@ -9,57 +9,31 @@
 <body>
 <div id="main">
 
-    <h2>US Population Search</h2>
+    <h2>US Population Search 20202</h2>
 
-    <form id=state-year-form>
-       <p>Select State & Year</p>
-       <p>State<select id="state-selector" name="state"></select></p>
-       <p>Year<select id="year-selector" name="year"></select></p>
-       <input id="input-stae-year" type='submit' name='submit'/>
-       <p></p>
+    <form id="state-select-form">
+       <p>Select State</p>
+       <select id="state-selector" name="state">
+        <option disabled hidden selected>select</option>
+       </select>
+       <input id="input-state" type='submit' name='submit'/>
+       <p>result</p>
     </form>
 
     <div id="year-box" class="box">
-        <p>Year</p>
-      </div>
-
-
-
-
-
+      <h2 id="blah">Year</h2>
+      <p></p>
+    </div>
 
     <div id="state-box" class="box">
-        <p>State</p>
+        <h2>State</h2>
+        <p></p>
       </div>
-
-
-
-
-
 
     <div id="population-box" class="box">
-        <p>Population</p>
+        <h2>Population</h2>
+        <p></p>
       </div>
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 </body>
