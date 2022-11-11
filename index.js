@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  // The value for every option will be each objects ID.
                  stateOption.value = state["ID State"];
                  // Now we add stateOption and its text + value into stateSelect (our dropdown)
+                 stateOption.className = "option-class"
                  stateSelect.appendChild(stateOption);
 });
 
