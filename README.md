@@ -25,3 +25,5 @@ This application only shows data from the year 2020.
 Sources:
 API: Parent website: https://datausa.io/about/api/
 API: https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest
+US Map:https://www.infoandopinion.com/wp-content/uploads/2021/07/USA-Map-Blank.png
+Thumbs up: https://cdn-icons-png.flaticon.com/512/5277/5277377.png

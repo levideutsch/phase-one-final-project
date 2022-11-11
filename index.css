@@ -9,11 +9,16 @@ body {
 }
 
 #title {
-  color: rgb(255, 0, 0);
+  color: rgb(85, 93, 181);
   font-family: sans-serif;
   font-size: 36px;
   font-weight: 600;
   margin-top: 30px;
+}
+
+#test {
+  text-align: center;
+  color:  rgb(85, 93, 181);
 }
 
 #sate-select-form {
@@ -24,10 +29,6 @@ body {
   padding: 20px;
   width: 320px;
   
-}
-
-#test {
-  text-align: center;
 }
 
 #state-selector {
@@ -52,7 +53,7 @@ body {
 display: grid;
 grid-template-columns: 290px 0px 100px;
 grid-gap: 0px;
-background-color: rgb(98, 91, 91);
+background-color: rgb(247, 5, 5);
 color: rgb(255, 255, 255);
 border-bottom: 1px solid rgb(241, 228, 228);
 border-left: 1px solid rgb(241, 228, 228); 
@@ -61,7 +62,7 @@ border-right: 1px solid rgb(241, 228, 228);
 } 
 
 .results {
-  color:rgb(255, 0, 0);
+  color:rgb(255, 255, 255);
 } 
 
 #usa-photo {

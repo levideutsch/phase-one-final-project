@@ -95,11 +95,11 @@ form.addEventListener("submit", event => {
                 if (state["ID State"] === dropdown.value) { 
             
                  document.querySelector("#year-box > p").textContent = state["ID Year"];
-                 document.querySelector("#state-box > p").textContent = state["State"];
-                 document.querySelector("#population-box > p").textContent = state["Population"];
+                 document.querySelector("#state-box > p").textContent = state.State;
+                 document.querySelector("#population-box > p").textContent = state.Population;
             
                  document.querySelector("#state-box > p").addEventListener("click", e => {
-                 window.open(stateWebsites[state["State"]], "_blank");
+                 window.open(stateWebsites[state.State], "_blank");
                  // querySelector uses :checked psudoclass not :selected for the picked dropdown
         // this is super duper haram!!!!!!!!!! 😤😤😤😤😤😤
         // const state = dropdown.querySelector('option:checked').text;
