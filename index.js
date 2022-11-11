@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  // The value for every option will be each objects ID.
                  stateOption.value = state["ID State"];
                  // Now we add stateOption and its text + value into stateSelect (our dropdown)
-                 stateOption.className = "option-class"
+                //  stateOption.className = 
                  stateSelect.appendChild(stateOption);
 });
 
@@ -111,15 +111,22 @@ form.addEventListener("submit", event => {
 
 // Image click event
 let population = document.getElementById("population-box")
-population.addEventListener("click", function() {
+population.addEventListener("click", () => {
    
                  const img = document.createElement("img")
                  img.src = "https://www.infoandopinion.com/wp-content/uploads/2021/07/USA-Map-Blank.png"
                  img.id = "usa-photo"
                  document.body.appendChild(img)
+
+                 img.addEventListener("mouseover", () => {
+                    const img2 = document.createElement("img")
+                    img2.src = "https://cdn-icons-png.flaticon.com/512/5277/5277377.png"
+                    document.body.appendChild(img2)
+                 }) 
      
     },{once : true});
-})
+    
+}) 
 
 
 

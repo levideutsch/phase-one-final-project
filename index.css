@@ -23,6 +23,11 @@ body {
   height: 500px;
   padding: 20px;
   width: 320px;
+  
+}
+
+#test {
+  text-align: center;
 }
 
 #state-selector {
@@ -44,30 +49,29 @@ body {
 }
 
 .box {
-width: 113px;
-padding: 1px;
-border: 2px solid  #4287f5;
-margin: 0;
-text-align: center;
-margin-left: 140px;
+display: grid;
+grid-template-columns: 290px 0px 100px;
+grid-gap: 0px;
+background-color: rgb(98, 91, 91);
+color: rgb(255, 255, 255);
+border-bottom: 1px solid rgb(241, 228, 228);
+border-left: 1px solid rgb(241, 228, 228); 
+border-top: 1px solid rgb(241, 228, 228); 
+border-right: 1px solid rgb(241, 228, 228);
 } 
 
 .results {
-  width: 113px;
   color:rgb(255, 0, 0);
-  padding: 1px;
-  /* border: 2px solid  #4287f5; */
-  margin: 0;
-  /* text-align: center; */
-  margin-left: 140px;
+} 
 
-  
-
+#usa-photo {
+  max-width: 500%;
+  height:auto;
+  position:fixed;
+  opacity: 0.5;
 }
 
-
-
-
+/* :hover */
 
 
 

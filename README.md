@@ -2,7 +2,7 @@
 * Photo of page*
 
 Intro:
-Curiosity is what pushes humans to come up with incredible ideas like the Airplane, or the lightbulb. Some people are curious for different things, like “How fast can this car drive”, or “How many people live in the state of Maine” (Who ever heard of Maine, right?).
+Curiosity pushes humans to come up with incredible ideas like the Airplane, or the lightbulb. Some people are curious about different things, like “How fast can this car drive”, or “How many people live in the state of Maine” (Who ever heard of Maine, right?).
 
 Well here I’ve created an application to allow users to view any states population.
 
