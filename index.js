@@ -54,8 +54,13 @@ const stateWebsites = {
     "Puerto Rico": "https://pr.gov/Pages/default.aspx",
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
+
+    let currentSite;
+
+    document.querySelector("#state-box > p").addEventListener("click", () => {
+        window.open(currentSite, "_blank");
+    });
 
     fetch('https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest')
     .then(response => response.json())
@@ -84,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Here we will create a submit event listener, that when state is clicked year + state + population printed out.
-const form = document.getElementById("state-select-form")
+const form = document.getElementById("state-select-form");
 form.addEventListener("submit", event => {
 
         event.preventDefault();
@@ -98,12 +103,7 @@ form.addEventListener("submit", event => {
                  document.querySelector("#state-box > p").textContent = state.State;
                  document.querySelector("#population-box > p").textContent = state.Population;
             
-                 document.querySelector("#state-box > p").addEventListener("click", e => {
-                 window.open(stateWebsites[state.State], "_blank");
-                 // querySelector uses :checked psudoclass not :selected for the picked dropdown
-        // this is super duper haram!!!!!!!!!! 😤😤😤😤😤😤
-        // const state = dropdown.querySelector('option:checked').text;
-                })
+                 currentSite = stateWebsites[state.State]
             }
         })
     })
@@ -119,10 +119,10 @@ population.addEventListener("click", () => {
                  document.body.appendChild(img)
 
                  img.addEventListener("mouseover", () => {
-                    const img2 = document.createElement("img")
-                    img2.src = "https://cdn-icons-png.flaticon.com/512/5277/5277377.png"
-                    document.body.appendChild(img2)
-                 }) 
+                 const img2 = document.createElement("img")
+                 img2.src = "https://cdn-icons-png.flaticon.com/512/5277/5277377.png"
+                 document.body.appendChild(img2)
+                }) 
      
     },{once : true});
     

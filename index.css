@@ -53,12 +53,17 @@ body {
 display: grid;
 grid-template-columns: 290px 0px 100px;
 grid-gap: 0px;
-background-color: rgb(247, 5, 5);
+background-color: rgb(245, 62, 62);
 color: rgb(255, 255, 255);
 border-bottom: 1px solid rgb(241, 228, 228);
 border-left: 1px solid rgb(241, 228, 228); 
 border-top: 1px solid rgb(241, 228, 228); 
 border-right: 1px solid rgb(241, 228, 228);
+/* grid-template-columns: 290px 290px;
+border-right: 3px solid purple;
+display: inline-block;
+margin: 0 5px;
+padding: 15px; */
 } 
 
 .results {
