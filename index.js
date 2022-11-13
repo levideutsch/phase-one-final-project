@@ -54,19 +54,16 @@ const stateWebsites = {
     "Puerto Rico": "https://pr.gov/Pages/default.aspx",
 }
 
+// this is our API
+const endpoint = 'https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest';
+
+// listener #1. When the page loads we load all the states into the dropdown
 document.addEventListener("DOMContentLoaded", () => {
-
-    let currentSite;
-
-    document.querySelector("#state-box > p").addEventListener("click", () => {
-        window.open(currentSite, "_blank");
-    });
-
-    fetch('https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest')
-    .then(response => response.json())
-    .then(response => {
-         // Here we store our API locally into the "states" variable.
-         const states = response.data;
+    // render the states in the dropdown
+    fetch(endpoint)
+        .then(response => response.json())
+        .then(response => {
+            const states = response.data;
 
             // States data for dropdown
             // const stateSelect = document.getElementById("state-selector")
@@ -85,66 +82,50 @@ document.addEventListener("DOMContentLoaded", () => {
                  // Now we add stateOption and its text + value into stateSelect (our dropdown)
                 //  stateOption.className = 
                  stateSelect.appendChild(stateOption);
+            })
+        });
+
+    // listener #2 and #3 need to be registered after the dom is rendered
+
+    // listener #2. When the form is submitted make an API call and update the form
+    document.getElementById("state-select-form").addEventListener("submit", event => {
+        event.preventDefault();
+        const dropdown = document.getElementById('state-selector');
+        fetch(endpoint)
+            // format the response as json
+            .then(response => response.json())
+            // find and render the state we want
+            .then(response => {
+                // use .find to get the state by its id
+                const state = response.data.find(state => state["ID State"] === dropdown.value);
+                
+                // update the 3 properties we want from the API
+                document.querySelector("#year-box > p").textContent = state["ID Year"];
+                document.querySelector("#state-box > p").textContent = state.State;
+                document.querySelector("#population-box > p").textContent = state.Population;
+            })
+    });
+
+
+    // listener #3, when the population box is clicked we want to show the picture
+    document.getElementById("population-box").addEventListener("click", () => {
+        const img = document.createElement("img")
+        img.src = "https://www.infoandopinion.com/wp-content/uploads/2021/07/USA-Map-Blank.png"
+        img.id = "usa-photo"
+        document.body.appendChild(img)
+
+        // Listener #4, add another picture when the mouse hovers over the picture
+        img.addEventListener("mouseover", () => {
+            const img2 = document.createElement("img")
+            img2.src = "https://cdn-icons-png.flaticon.com/512/5277/5277377.png"
+            document.body.appendChild(img2)
+        })
+    },{once : true});
 });
 
 
-// Here we will create a submit event listener, that when state is clicked year + state + population printed out.
-const form = document.getElementById("state-select-form");
-form.addEventListener("submit", event => {
 
-        event.preventDefault();
-        const dropdown = document.getElementById('state-selector');
-            // For every object of our API
-            states.find(state => {
-
-                if (state["ID State"] === dropdown.value) { 
-            
-                 document.querySelector("#year-box > p").textContent = state["ID Year"];
-                 document.querySelector("#state-box > p").textContent = state.State;
-                 document.querySelector("#population-box > p").textContent = state.Population;
-            
-                 currentSite = stateWebsites[state.State]
-            }
-        })
-    })
-})
-
-// Image click event
-let population = document.getElementById("population-box")
-population.addEventListener("click", () => {
-   
-                 const img = document.createElement("img")
-                 img.src = "https://www.infoandopinion.com/wp-content/uploads/2021/07/USA-Map-Blank.png"
-                 img.id = "usa-photo"
-                 document.body.appendChild(img)
-
-                 img.addEventListener("mouseover", () => {
-                 const img2 = document.createElement("img")
-                 img2.src = "https://cdn-icons-png.flaticon.com/512/5277/5277377.png"
-                 document.body.appendChild(img2)
-                }) 
-     
-    },{once : true});
-    
-}) 
-
-
-
-
-
-// states.find(state => {
-
-//     if (state["ID State"] === dropdown.value) { 
-    
-//         document.querySelector("#year-box > p").textContent = state["ID Year"];
-//         document.querySelector("#state-box > p").textContent = state["State"];
-//         document.querySelector("#population-box > p").textContent = state["Population"];
-    
-//         document.querySelector("#state-box > p").addEventListener("click", e => {
-//         window.open(stateWebsites[state["State"]], "_blank");
-//         })
-//      }
-// })
+//
 
 
 
@@ -161,11 +142,3 @@ population.addEventListener("click", () => {
     //             });
     //         }
     //     }
-
-
-
-
-
-
-
-
