@@ -1,6 +1,6 @@
 # phase-one-final-project
-* Photo of page*
 
+![* Photo of page*](https://file%2B.vscode-resource.vscode-cdn.net/Users/levideutsch/Desktop/Screen%20Shot%202022-11-13%20at%2011.45.48%20AM.png?version%3D1668357993395)
 ## Intro:
 Curiosity pushes humans to come up with incredible ideas like the Airplane, or the lightbulb. Some people are curious about different things, like “How fast can this car drive”, or “How many people live in the state of Maine” (Who ever heard of Maine, right?).
 
@@ -24,7 +24,7 @@ input any state from a dropdown. Based off of the chosen state users will be abl
 This application only shows data from the year 2020.
 
 ###### Sources:
-* API: Parent website: (https://datausa.io/about/api/)
-* API: (https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest)
-* US Map: (https://www.infoandopinion.com/wp-content/uploads/2021/07/USA-Map-Blank.png)
-* Thumbs up: (https://cdn-icons-png.flaticon.com/512/5277/5277377.png)
+* [API: Parent website:] (https://datausa.io/about/api/)
+* [API:] (https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest)
+* [US Map:] (https://www.infoandopinion.com/wp-content/uploads/2021/07/USA-Map-Blank.png)
+* [Thumbs up:] (https://cdn-icons-png.flaticon.com/512/5277/5277377.png)
