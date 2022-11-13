@@ -3,7 +3,8 @@
 Curiosity pushes humans to come up with incredible ideas like the Airplane, or the lightbulb. Some people are curious about different things, like “How fast can this car drive”, or “How many people live in the state of Maine” (Who ever heard of Maine, right?).
 
 Well here I’ve created an application to allow users to view any states population.
-![photo](Screen-Shot-2022-11-13-at-11.45.48-AM.png)
+![photo](<img width="706" alt="Screen Shot 2022-11-13 at 11 45 48 AM" src="https://user-images.githubusercontent.com/109255397/201534426-e04db1af-5cc2-4dfc-b251-db4497f4dd8c.png">)
+
 
 ### How it works:
 **Photo of screen once state is chosen**
