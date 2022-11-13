@@ -3,7 +3,7 @@
 Curiosity pushes humans to come up with incredible ideas like the Airplane, or the lightbulb. Some people are curious about different things, like “How fast can this car drive”, or “How many people live in the state of Maine” (Who ever heard of Maine, right?).
 
 Well here I’ve created an application to allow users to view any states population.
-![Photo of page](https://file%2B.vscode-resource.vscode-cdn.net/Users/levideutsch/Development/code/phase-1/phase-one-final-project/Screen%20Shot%202022-11-13%20at%2011.45.48%20AM.png?version%3D1668358504089)
+![Photo of page](Screen Shot 2022-11-13 at 11.45.48 AM.png)
 
 ### How it works:
 **Photo of screen once state is chosen**
