@@ -3,6 +3,7 @@
 Curiosity pushes humans to come up with incredible ideas like the Airplane, or the lightbulb. Some people are curious about different things, like “How fast can this car drive”, or “How many people live in the state of Maine” (Who ever heard of Maine, right?).
 
 Well here I’ve created an application to allow users to view any states population.
+![photo](Screen Shot 2022-11-13 at 11.45.48 AM)
 
 
 ### How it works:
