@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     // listener #2 and #3 need to be registered after the dom is rendered
-
     // listener #2. When the form is submitted make an API call and update the form
     document.getElementById("state-select-form").addEventListener("submit", event => {
         event.preventDefault();
