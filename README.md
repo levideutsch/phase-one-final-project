@@ -8,7 +8,7 @@ Well here I’ve created an application to allow users to view any states popula
 
 ### How it works:
 **Photo of screen once state is chosen**
-
+![photo](dropdown1.png)
 input any state from a dropdown. Based off of the chosen state users will be able to see the country, state, and the states population.
 
 #### Hidden features:
