@@ -16,8 +16,8 @@ Input any state from our dropdown. Based off of the chosen state users will be a
 **photo of hidden features**
 1. If user clicks on "population" a map of the united states will appare.
 ![photo](clickEvent.png)
-2. If user clicks on "state" user will see pop-up of that states governments website.
-*Photo for this feature*
+2. Once the map is shown, if the user hovers over it a bunch of "good job" thumbs will appear and eventually get rid of the entire page.
+![photo](mouseoverEvent.png)
 
 
 ##### Key details:
