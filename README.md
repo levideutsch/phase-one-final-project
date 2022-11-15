@@ -21,7 +21,7 @@ Input any state from our dropdown. Based off of the chosen state users will be a
 
 
 ##### Key details:
-This application only shows data from the year 2020.
+This applications hows data from the year 2020.
 
 ###### Sources:
 * [API: Parent website:] (https://datausa.io/about/api/)
