@@ -15,7 +15,7 @@ Input any state from our dropdown. Based off of the chosen state users will be a
 #### Hidden features:
 **photo of hidden features**
 1. If user clicks on "population" a map of the united states will appare.
-*Photo for this feature*
+![photo](clickEvent.png)
 2. If user clicks on "state" user will see pop-up of that states governments website.
 *Photo for this feature*
 
