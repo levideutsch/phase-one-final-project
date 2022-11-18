@@ -1,6 +1,6 @@
 const api = 'https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest';
 
-// listener #1. When the page loads we load all the states into the dropdown
+// listener #1. 
 document.addEventListener("DOMContentLoaded", () => {
     // render the states in the dropdown
     fetch(api)
@@ -8,11 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => {
             const states = response.data;
 
-            // States data for dropdown
-            // const stateSelect = document.getElementById("state-selector")
-
-            //response.data
-            // Here we say for each object od our API do this...
             states.forEach(state => {
 
                  const stateSelect = document.getElementById("state-selector")
@@ -28,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         });
 
-    // listener #2 and #3 need to be registered after the dom is rendered
-    // listener #2. When the form is submitted make an API call and update the form
+    
+    // listener #2. 
     document.getElementById("state-select-form").addEventListener("submit", event => {
         event.preventDefault();
         const dropdown = document.getElementById('state-selector');
@@ -39,29 +34,41 @@ document.addEventListener("DOMContentLoaded", () => {
             // find and render the state we want
             .then(response => {
             
-                // use .find to get the state by its id
+                
                 const item = response.data.find(state => state["ID State"] === dropdown.value);
                 
                 // update the 3 properties we want from the API
                 document.querySelector("#year-box > p").textContent = item["ID Year"];
                 document.querySelector("#state-box > p").textContent = item.State;
                 document.querySelector("#population-box > p").textContent = item.Population;
+                // changeFontColor()
             })
     });
 
 
-    // listener #3, when the population box is clicked we want to show the picture
+    // listener #3.
     document.getElementById("population-box").addEventListener("click", () => {
         const img = document.createElement("img")
         img.src = "https://www.infoandopinion.com/wp-content/uploads/2021/07/USA-Map-Blank.png"
         img.id = "usa-photo"
         document.body.appendChild(img)
 
-        // Listener #4, add another picture when the mouse hovers over the picture
+        // Listener #4.
         img.addEventListener("mouseover", () => {
             const img2 = document.createElement("img")
             img2.src = "https://cdn-icons-png.flaticon.com/512/5277/5277377.png"
             document.body.appendChild(img2)
         })
-    },{once : true});
+    });
 });
+
+// function changeFontColor() {
+//     let button = document.getElementById("input-state"); // access the button by id
+//     let color = button.style.color;
+//     if (color === "red") { // if button color is red change it green otherwise change it to red.
+//        button.style.color = 'blue';
+//     } else {
+//        button.style.color = 'red';
+//     }
+//  }
+//,{once : true}
