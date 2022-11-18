@@ -1,9 +1,9 @@
-// const link = 'https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest';
+const api = 'https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest';
 
 // listener #1. When the page loads we load all the states into the dropdown
 document.addEventListener("DOMContentLoaded", () => {
     // render the states in the dropdown
-    fetch('https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest')
+    fetch(api)
         .then(response => response.json())
         .then(response => {
             const states = response.data;
@@ -33,18 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("state-select-form").addEventListener("submit", event => {
         event.preventDefault();
         const dropdown = document.getElementById('state-selector');
-        fetch('https://datausa.io/api/data?drilldowns=State&measures=Population&year=latest')
+        fetch(api)
             // format the response as json
             .then(response => response.json())
             // find and render the state we want
             .then(response => {
+            
                 // use .find to get the state by its id
-                const state = response.data.find(state => state["ID State"] === dropdown.value);
+                const item = response.data.find(state => state["ID State"] === dropdown.value);
                 
                 // update the 3 properties we want from the API
-                document.querySelector("#year-box > p").textContent = state["ID Year"];
-                document.querySelector("#state-box > p").textContent = state.State;
-                document.querySelector("#population-box > p").textContent = state.Population;
+                document.querySelector("#year-box > p").textContent = item["ID Year"];
+                document.querySelector("#state-box > p").textContent = item.State;
+                document.querySelector("#population-box > p").textContent = item.Population;
             })
     });
 
